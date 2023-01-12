@@ -1,0 +1,4 @@
+import pandas as pd
+
+draft1 = pd.read_csv(r'C:\Users\HP\Desktop\pandas\code_pandas1\examples\ex1.csv')    # Supply the file name (path)
+draft1.head(4)
