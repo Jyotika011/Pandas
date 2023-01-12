@@ -1,4 +1,55 @@
+#For reading csv file
 import pandas as pd
 
 draft1 = pd.read_csv(r'C:\Users\HP\Desktop\pandas\code_pandas1\examples\ex1.csv')    # Supply the file name (path)
-draft1.head(4)
+draft1
+#draft1.head(4)   #for reading first 4 dataset
+#draft1.tail()    #read data from the last
+
+
+#For tsv file
+
+import pandas as pd
+draft2 = pd.read_table(r'C:\Users\HP\Desktop\pandas\code_pandas1\examples\test.tsv')  # Read a tsv into a DataFrame
+draft2.head()                                   
+
+
+#If don't want 1st row of data to be considered as header 
+pd.read_csv('ex1.csv', header=None)
+
+#adding columns in dataframe
+df =pd.read_csv('ex2.csv', names=['asdfdsfs','fsdf', 'b', 'c', 'jyotika', 'message'])
+df
+
+#data-'csv_mindex.csv'
+key1,key2,value1,value2
+one,a,1,2
+one,b,3,4
+one,c,5,6
+one,d,7,8
+two,a,9,10
+two,b,11,12
+two,c,13,14
+two,d,15,16
+
+#overriding index name or creating index inside index
+parsed = pd.read_csv('csv_mindex.csv',index_col=['key1', 'key2'])
+parsed
+
+#skipping rows
+pd.read_csv('ex4.csv', skiprows=[0, 2, 3])
+
+#changing NAN to NULL
+result = pd.read_csv('ex5.csv', na_values=['NULL'])
+result
+
+#check datatype of a particular column
+df.['age'].dtype
+#check if anydata is null
+df.isnull()
+
+#rename a column
+df.rename(columns={'age':'AGE'})
+
+
+
