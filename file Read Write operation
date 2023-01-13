@@ -51,5 +51,17 @@ df.isnull()
 #rename a column
 df.rename(columns={'age':'AGE'})
 
+#read a particular number of rows
+import pandas as pd
+result = pd.read_csv('ex6.csv')
+pd.options.display.max_rows = 10       #give the no of rows
+result
+#new way
+pd.read_csv('ex6.csv', nrows=5)          #head method is a memoryintensive method
+
+
+
+
+
 
 
