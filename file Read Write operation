@@ -59,6 +59,9 @@ result
 #new way
 pd.read_csv('ex6.csv', nrows=5)          #head method is a memoryintensive method
 
+#saving data 
+data_to_csv('file name', sep= )
+
 
 
 
